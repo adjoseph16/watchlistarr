@@ -74,7 +74,6 @@ trait PlexUtils {
         .unsafeFromString("https://discover.provider.plex.tv/library/sections/watchlist/all")
         .withQueryParam("X-Plex-Token", token)
         .withQueryParam("X-Plex-Container-Start", containerStart)
-        .withQueryParam("X-Plex-Container-Size", containerSize)
 
       for {
         response       <- EitherT(client.httpRequest(Method.GET, url))
